@@ -1,53 +1,132 @@
 # IoT Security Project: 6LoWPAN Attack Detection & Mitigation
 
-Implementation of SDN-enabled intrusion detection with TinyML and Reinforcement Learning for constrained IoT networks.
+An intelligent security framework for detecting and mitigating routing attacks in constrained IoT networks using Software-Defined Networking (SDN), TinyML, and Reinforcement Learning (RL).
 
 ## Project Overview
 
-This project implements an intelligent security framework for detecting and preventing routing attacks (Selective Forwarding, Sinkhole, Spoofing, DDoS) in 6LoWPAN networks using:
-- Centralized SDN-based monitoring
-- TinyML for lightweight anomaly detection
-- Reinforcement Learning for autonomous mitigation
+This project proposes a multi-layer security architecture for 6LoWPAN-based IoT networks. The framework continuously monitors network traffic, detects malicious behavior using lightweight machine learning models, and automatically applies mitigation strategies through a reinforcement learning agent.
+
+### Key Features
+
+* Centralized SDN-based network monitoring
+* TinyML-powered anomaly detection for resource-constrained devices
+* Reinforcement Learning-based autonomous mitigation
+* Detection of multiple routing attacks:
+
+  * Selective Forwarding Attack
+  * Sinkhole Attack
+  * Spoofing Attack
+  * Distributed Denial-of-Service (DDoS) Attack
+* End-to-end integration of simulation, detection, and mitigation components
+
+## Technology Stack
+
+| Category               | Technologies                    |
+| ---------------------- | ------------------------------- |
+| Network Simulation     | Contiki-NG, Cooja               |
+| Programming Languages  | C, Python                       |
+| Machine Learning       | TensorFlow, Keras, Scikit-learn |
+| TinyML                 | TensorFlow Lite                 |
+| Reinforcement Learning | Stable Baselines3               |
+| Data Processing        | Pandas, NumPy                   |
+
+## Project Structure
+
+```text
+iot-security-project/
+├── phase1_setup/         # Environment setup and dependencies
+├── phase2_simulation/    # Cooja simulations and attack implementations
+├── phase3_tinyml/        # TinyML anomaly detection models
+├── phase4_rl/            # Reinforcement Learning agent training
+├── integration/          # End-to-end system integration
+├── docs/                 # Documentation and analysis
+└── README.md
+```
+
+## Project Workflow
+
+```text
+6LoWPAN Network
+       ↓
+Traffic Monitoring (SDN Controller)
+       ↓
+Feature Extraction
+       ↓
+TinyML Anomaly Detection
+       ↓
+Attack Classification
+       ↓
+RL-Based Mitigation
+       ↓
+Network Recovery
+```
+
+## Supported Attacks
+
+| Attack               | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| Selective Forwarding | Malicious nodes selectively drop packets                 |
+| Sinkhole             | A malicious node attracts surrounding traffic            |
+| Spoofing             | Fake identities are used to impersonate legitimate nodes |
+| DDoS                 | Multiple nodes flood the network with traffic            |
 
 ## Quick Start
 
-```bash
-# Phase 2: Network Simulation
-cd phase2_simulation
-# See README.md for Cooja setup
+### Phase 1: Environment Setup
 
-# Phase 3: Machine Learning
+```bash
+cd phase1_setup
+```
+
+### Phase 2: Network Simulation
+
+```bash
+cd phase2_simulation
+# Refer to the README inside this directory for Cooja setup instructions.
+```
+
+### Phase 3: TinyML Model Training
+
+```bash
 cd ../phase3_tinyml
 jupyter notebook
+```
 
-# Phase 4: Reinforcement Learning  
+### Phase 4: Reinforcement Learning Training
+
+```bash
 cd ../phase4_rl
 python src/dqn_training.py
 ```
 
-## Project Structure
+## Project Status
 
-├── phase1_setup/           # Environment and tools setup
-├── phase2_simulation/       # Cooja IoT network + attack implementations
-├── phase3_tinyml/          # Anomaly detection models and evaluation
-├── phase4_rl/              # Reinforcement learning agent training
-├── integration/            # End-to-end pipeline
-└── docs/                   # Documentation and analysis
-## Technologies
+* [x] Environment setup and verification
+* [ ] Network simulation and attack implementation
+* [ ] TinyML anomaly detection model
+* [ ] Reinforcement Learning mitigation framework
+* [ ] End-to-end integration and evaluation
 
-- **Simulation:** Contiki-NG, Cooja
-- **Language:** C (embedded), Python (ML/RL)
-- **ML/RL:** TensorFlow, Keras, TinyML, Stable Baselines3
-- **Data:** Pandas, NumPy, Scikit-learn
+## Expected Outcomes
 
-## Progress
+* Accurate detection of routing attacks in 6LoWPAN networks.
+* Lightweight anomaly detection suitable for constrained IoT devices.
+* Autonomous attack mitigation using Reinforcement Learning.
+* Improved network resilience and packet delivery performance.
 
-- [x] Environment setup and verification
-- [ ] Network simulation with attack implementation
-- [ ] TinyML anomaly detection model
-- [ ] RL-based mitigation framework
-- [ ] Full integration and evaluation
+## Future Enhancements
+
+* Deploy the framework on physical sensor nodes.
+* Support additional attack types.
+* Explore federated learning for distributed anomaly detection.
+* Implement real-time visualization dashboards.
+
+## Author
+
+**Yashwanth Maloth**
+B.Tech Information Technology, VNR VJIET
 
 ---
 
-Last updated: 01/07/2026
+Last Updated: 2026-07-01
+
