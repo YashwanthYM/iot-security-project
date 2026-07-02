@@ -122,36 +122,29 @@ iot-security-project/
 
 ---
 
-## Experimental Results
+## Experimental Evaluation (In Progress)
 
-| Attack               | Accuracy   | Precision  | Recall     | F1 Score   | ROC-AUC    |
-| -------------------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Selective Forwarding | **0.9935** | 0.8973     | **0.9924** | 0.9424     | **0.9998** |
-| Sinkhole             | 0.9128     | 0.8764     | 0.9487     | 0.9110     | 0.9421     |
-| Spoofing             | 0.9403     | **1.0000** | 0.8910     | 0.9423     | 0.9320     |
-| DDoS                 | 0.9854     | 0.9812     | 0.9921     | **0.9866** | 0.9890     |
+The following metrics will be reported after completing the experiments:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* ROC-AUC
+* Packet Delivery Ratio (PDR)
+* Detection Latency
+* Mitigation Success Rate
+
+Results will be added after the completion of the TinyML and Reinforcement Learning evaluation phases.
 
 ---
 
-## Improvements Over Original Framework
+## Planned Enhancements
 
-* Improved **Spoofing Attack Detection**:
-
-  * Recall increased from **0.7576 → 0.8910**
-  * Achieved through identity consistency features and additional traffic characteristics.
-
-* Added **Baseline Comparisons**:
-
-  * LSTM Autoencoder
-  * Random Forest
-  * Traditional statistical methods
-
-* Enhanced project structure with:
-
-  * End-to-end integration pipeline
-  * Better documentation
-  * Interview preparation guide
-  * Real-time dashboard integration (Work in Progress)
+* Investigate identity consistency features to improve spoofing detection.
+* Compare LSTM Autoencoder against Random Forest and other baselines.
+* Develop an end-to-end integration pipeline.
+* Build a real-time monitoring dashboard.
 
 ---
 
@@ -183,7 +176,7 @@ python integration/pipeline.py
 * [ ] End-to-End Integration
 * [ ] Final Documentation and Dashboard
 
-**Current Progress:** ~80% Complete
+**Current Status:** Development and experimentation in progress.
 
 **Last Updated:** 2026-07-01
 
@@ -218,4 +211,3 @@ VNR Vignana Jyothi Institute of Engineering and Technology (VNR VJIET)
 ---
 
 *AI-Driven Security for Resource-Constrained IoT Networks using SDN, TinyML, and Reinforcement Learning.*
-
